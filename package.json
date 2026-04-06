@@ -1,0 +1,36 @@
+{
+  "name": "yoga-instruct",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "A web application for yoga and stretching routines with AI feedback.",
+  "author": "Keshav Dayal",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview --port 8080"
+  },
+  "dependencies": {
+    "ml5": "^0.12.2",
+    "p5": "^1.9.4",
+    "react": "^18.3.1",
+    "react-router-dom": "^6.24.1",
+    "sass": "^1.77.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "patch-package": "^8.0.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2",
+    "vite": "^5.3.1"
+  }
+}
