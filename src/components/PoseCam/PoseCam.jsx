@@ -152,8 +152,9 @@ const PoseCam = ({ pose }) => {
         )}
         <h1>{english_name}</h1>
       </div>
-      <div className="cam-container">
-        <div className="cam__content--left">
+      <div className="posecam-grid">
+        {/* Left Section: Camera */}
+        <div className="posecam-grid__left">
           <div ref={canvasRef}></div>
           <div
             className={`cam__feedback ${
@@ -164,21 +165,31 @@ const PoseCam = ({ pose }) => {
           </div>
         </div>
 
-        <div className="cam__content--right">
-          <img
-            className="cam__img"
-            src={`${image}`}
-            alt={`${english_name} pose`}
-          />
-
-          <ol className="cam__instructions">
-            <h4>Step by Step</h4>
-            {instructions.map((step, index) => (
-              <li className="cam__instructions-step" key={index}>
-                {step}
-              </li>
-            ))}
-          </ol>
+        {/* Right Section: Top (Pose Image) */}
+        <div className="posecam-grid__right">
+          <div className="posecam-grid__right-top">
+            <img
+              className="cam__img"
+              src={`${image}`}
+              alt={`${english_name} pose`}
+            />
+            <ol className="cam__instructions">
+              <h4>Step by Step</h4>
+              {instructions.map((step, index) => (
+                <li className="cam__instructions-step" key={index}>
+                  {step}
+                </li>
+              ))}
+            </ol>
+          </div>
+          {/* Right Section: Bottom (Voice AI Placeholder) */}
+          <div className="posecam-grid__right-bottom">
+            <div className="voice-ai-placeholder">
+              {/* Voice AI feedback will be integrated here */}
+              <h4>Voice AI Guidance</h4>
+              <p>Audio feedback about your posture will appear here.</p>
+            </div>
+          </div>
         </div>
       </div>
     </>
